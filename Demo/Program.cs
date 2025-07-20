@@ -75,6 +75,145 @@
 
         static void Main(string[] args)
         {
+            // Array => Fixed size 
+            //Array => is a Data structure
+            //Array=> The same data type
+
+
+            #region Array
+
+            #region One Dimensional array
+            //Grades For Student in specific material
+            //int[] Numbers;
+            //Declare Fror Reference From Type Array 'Numbers'
+            // Reference 'Number' is Refer To Null 
+            // CLR will Allocate 4 bytes At Stack For Reference
+            //Numbers = new int[3] {1 , 2 , 3};
+            //Console.WriteLine(Numbers[0]);
+            //CLR will allocate 12 bytes At Heap For Array
+            // Initialize Allocated Bytes with Default Values [0,0,0]
+            //Console.WriteLine(Numbers[0]);
+            //Console.WriteLine(Numbers[1]);
+            //Console.WriteLine(Numbers[2]);
+
+            //Numbers[0] = 5;
+            //Numbers[1] = 10;
+            //Numbers[2] = 20;
+
+            //Console.WriteLine(Numbers[0]);
+            //Console.WriteLine(Numbers[1]);
+            //Console.WriteLine(Numbers[2]);
+
+
+            //Console.WriteLine($"Numbers of size of array{Numbers.Length} and Dimention of array is {Numbers.Rank}");
+
+
+            //for (int i = 0; i < Numbers.Length; i++)
+
+            //    Console.WriteLine(Numbers[i]);
+
+            //foreach (var item in Numbers)
+            //{
+            //    Console.WriteLine(item);
+            //}
+
+            //Creation
+            //int[] Numbers = new int[5] ;
+            //int[] Numbers01 = new int[5] { 1, 2, 3, 4, 5 };
+            //int[] Numbers02 = { 1, 2, 3, 4, 5 };
+            //int[] Numbers03 = [1,2,3,4,5,6];//C3 12 Collection Expression
+            #endregion
+
+            #region  2D Array
+            //Rectangular Array
+            //int[,] Marks = new int[2, 5] { {1,2,3,4,5 } , {6,7,8,9,10} };
+            // CLR will Allocate 40 bytes at Heap And Intialize with 0
+            //Marks[0,0] = 200;
+            //Console.WriteLine($"Numbers of size of array{Marks.Length} and Dimention of array is {Marks.Rank}");
+            //for (int i = 0; i < Marks.GetLength(0); i++)
+            //{
+            //    Console.WriteLine($"Grades of Student Number {i+1}");
+            //    for (int j = 0; j < Marks.GetLength(1); /*j++*/ )
+            //    {
+            //        Console.WriteLine($"Subject Number {j + 1} : ");
+            //        bool isParsed = int.TryParse(Console.ReadLine(), out Marks[i, j]);
+            //        if (isParsed)
+            //        {
+            //            j++;
+            //        }
+            //    }
+            //}
+            //Console.WriteLine("====================");
+
+            //for (int i = 0; i <Marks.Length ; /*i++*/)
+            //{
+            //    bool isParsed = int.TryParse(Console.ReadLine(), out int markValue);
+            //    Console.WriteLine(Marks[i/Marks.GetLength(1) , i % Marks.GetLength(1) ]);
+            //    if (isParsed)
+            //    {
+            //        i++;
+            //    }else
+            //    {
+            //        i = i; 
+            //    }
+            //}
+
+
+            #endregion
+
+            #region jagged Array
+            //Array of Arrayes it consider one dimentional Array
+            //int[][] JaggedArray = new int[3][];
+
+            //JaggedArray[0] = new int[4];
+            //JaggedArray[1] = new int[] { 10, 20 };
+            //JaggedArray[2] = [10, 15, 18];
+
+            #endregion
+
+            #region Methods of Array
+
+            #region Class Member Methods 
+            //int[] Numbers = [1, 2, 3, 4, 5, 6, 7, 4, 9, 10];
+            //Array.Sort(Numbers); //order with ascending order
+            //Array.Reverse(Numbers);
+            //Array.Clear(Numbers);//Return to deafault Value
+            //Array.Clear(Numbers , 2 , 5);//Overload
+            //Array.IndexOf(Numbers, 4);//Finds the index of the first Value
+            //Array.LastIndexOf(Numbers, 4);//Finds the index of the last Value
+            //Array.Resize(ref Numbers , 10);//Craete New Array With New Size
+
+            //foreach (var item in Numbers)
+            //{
+            //    Console.WriteLine(item);
+            //}
+
+            int[] Arr01 = [1, 2, 3, 4, 5];
+            int[] Arr02 = new int[5];
+
+            Array.Copy(Arr01, Arr02, 4);
+
+            Console.WriteLine(Arr02);
+
+            Array.ConstrainedCopy(Arr01 , 1 , Arr02 , 3 , 2);
+
+
+            #endregion
+
+            #region Object MemberMethods
+            //int[] Marks = [1, 2, 3, 4, 5];
+            //Marks.CopyTo(Arr02, 0);
+            //Marks.GetValue(5);
+            //Marks.SetValue(5 , 1);
+            //Marks.GetLength(1);
+            #endregion
+
+
+            #endregion
+
+            #endregion
+
+
             #region Function Prototype
             //StaticMethod(":)" , 10 ); // Passing parameter by order
             //StaticMethod(Count: 20, Shape: "#"); // Passing Parameter by name
@@ -178,7 +317,6 @@
             //Console.WriteLine($"Sum is {sum}");
 
             #endregion
-
 
 
             #endregion
